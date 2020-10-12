@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type HelloWorldProps = {
   text: string;
@@ -9,7 +9,7 @@ export const HelloWorld: React.FC<HelloWorldProps> = (props) => {
   return (
     <p>
       {text}
-      Hello World
+      Hello World!!!!!!!
     </p>
   );
 };

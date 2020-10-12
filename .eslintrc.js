@@ -1,5 +1,5 @@
 const OFF = 0
-const ERROR = 2
+// const ERROR = 2
 
 module.exports = {
   env: {
@@ -14,8 +14,9 @@ module.exports = {
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
     "airbnb",
+    "eslint-config-prettier",
   ],
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["@typescript-eslint"],
   parserOptions: {
     sourceType: "module",
     project: "./tsconfig.json",
@@ -34,8 +35,8 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": OFF,
     "import/prefer-default-export": OFF,
     // "better-styled-components/sort-declarations-alphabetically": ERROR,
-    "prettier/prettier": ERROR,
     'react/jsx-filename-extension': OFF,
-    "import/no-unresolved": OFF
+    "import/no-unresolved": OFF,
+    "no-use-before-define": OFF, // import Reactでエラーが起きるため
   },
 }

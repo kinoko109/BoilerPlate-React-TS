@@ -8,7 +8,7 @@ module.exports = {
     //  ディレクトリ名
     path: `${__dirname}/dist`,
     // ァイル名
-    filename: "main.js"
+    filename: "main.js",
   },
   module: {
     rules: [
@@ -16,16 +16,17 @@ module.exports = {
         // .ts, .tsx
         test: /\.tsx?$/,
         // TypeScriptコンパイル
-        use: "ts-loader"
-      }
-    ]
+        use: ["ts-loader"],
+      },
+    ],
   },
   // import 文で .ts や .tsx ファイルを解決するため
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".json"],
   },
   devServer: {
-    contentBase: "dist",
+    contentBase: "./dist/",
     open: true,
-  }
+    hot: true,
+  },
 };
