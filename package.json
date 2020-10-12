@@ -1,10 +1,11 @@
 {
   "name": "matsuoka",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack",
+    "build": "webpack",
+    "start": "webpack serve",
     "watch": "webpack -w",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/**",
     "fix": "eslint --ext .js,.jsx,.ts,.tsx --fix src/**",
